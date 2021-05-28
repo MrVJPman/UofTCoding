@@ -1,0 +1,28 @@
+Processing command: 'shelves 3 2'
+Processing command: 'drink mango 1'
+Processing command: 'drink orange 3'
+Processing command: 'drink apple 2'
+Processing command: 'drink peach 3'
+Processing command: 'drink nectarine 5'
+Processing command: 'load'
+Stocked refrigerator with 5 drinks.
+Processing command: 'customer simple'
+simple customer bought mango (1 day(s) until expiry).
+Processing command: 'new_day'
+Day 2: All drinks are still good.
+Processing command: 'customer determined'
+determined customer bought orange (2 day(s) until expiry).
+Processing command: 'customer determined'
+determined customer bought nectarine (4 day(s) until expiry).
+Processing command: 'new_day'
+Day 3: All drinks are still good.
+Processing command: 'customer determined'
+determined customer bought apple (0 day(s) until expiry).
+Processing command: 'new_day'
+Day 4: All drinks are still good.
+Processing command: 'new_day'
+Day 5: Found 1 expired drinks.
+Processing command: 'new_day'
+Day 6: All drinks are still good.
+Processing command: 'customer simple'
+simple customer left with nothing.

@@ -1,0 +1,17 @@
+shelves 3 2
+drink mango 1
+drink orange 3
+drink apple 2
+drink peach 3
+drink nectarine 5
+load
+customer simple
+new_day
+customer determined
+customer determined
+new_day
+customer determined
+new_day
+new_day
+new_day
+customer simple

@@ -1,0 +1,29 @@
+Bird:
+
+Paper->Rock if W
+Rock->Scissors if Q
+Scissors->Rock if *
+
+Parrot:
+
+Paper->Rock if W
+Rock->Scissors if Q
+Scissors->Rock if *
+
+Alternate between Stone, Mouse, Ant, Turtle, Bird, Parrot
+
+
+Stage 1[Identify, records unidentitifed strings]:
+Randomize movement, killing parrots, and avoid wolves, record enemy strings from lost.
+
+
+Stage 2:
+
+
+Stage 3:
+
+Stage 4:
+
+Stage 5[Retreat]:
+-Avoid all < 5 or 800 moves achieved, gets the world's height and distance, then separate, moving away repeatedly.
+

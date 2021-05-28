@@ -1,0 +1,148 @@
+RECURSIVE THINKING ON TREES
+
+Recursion on trees often follows this template:
+
+def method(r):
+    '''Do something to the tree rooted at Node r.'''
+    if r is None:
+        # figure out what the result is for an empty tree
+    else:
+        left_result = method(r.left)
+        right_result = method(r.right)
+        # combine the left and right result, and also think about the root node
+
+
+This approach comes straight from a picture (here, k is the root value):
+
+                  k
+                /   \
+               /     \
+              /       \
+             /\       /\    
+            /  \     /  \
+           /    \   /    \
+          /      \  ------
+          --------
+
+In order to write code for many recursive problems, I need to know what the
+result is on the left subtree and on the right subtree.
+
+I *always* draw this picture and mark it up with example values. (When you've
+done it as many times as I have, you can draw it in your mind. Until then, do
+it on paper.)
+
+I also *always* think about what the answer is for an empty tree.
+
+Here are some examples and a couple practice problems:
+
+def size(r):
+    '''Return the number of nodes in the tree rooted at Node r.'''
+
+Example:
+            k
+         /     \
+        /       \        What if the left size is 3 and the right size is 7?
+       /\       /\       What is the total size?
+      /  \     /  \      3 + 7 + 1 (the 1 is for the root)
+     /    \   /    \
+    /      \  ------
+    --------
+
+Code:
+
+    if r is None:
+        return 0 # there are no nodes in an empty tree
+    else:
+        # the total number of nodes is the number of nodes in the left
+        # subtree plus the number of nodes in the right subtree,
+        # plus 1 for the root r.
+        left_result = size(r.left)
+        right_result = size(r.right)
+        return 1 + left_result + right_result
+
+
+def sum(r):
+    '''Return the sum of the keys in the tree rooted at Node r.'''
+
+    Example:
+                k
+             /     \
+            /       \        What if the left sum is 20 and the right sum is 3?
+           /\       /\       What is the total sum?
+          /  \     /  \      20 + 3 + k
+         /    \   /    \
+        /      \  ------
+        --------
+
+Code:
+    if r is None:
+        return 0 # Why?
+    else:
+        # the sum of the whole tree is the sum of the values in the left
+        # subtree plus the sum of the values in the right subtree,
+        # plus r.key.
+        left_result = sum(r.left)
+        right_result = sum(r.right)
+        return r.key + left_result + right_result
+
+
+
+You try it: fill in the missing values below to come up with an example:
+
+def longest_path(r):
+    '''Return the length of the longest path in the tree rooted at Node r.'''
+
+    Example:
+                k
+             /     \
+            /       \        What if the left longest path is ___ and the right
+           /\       /\       longest path is ___? What is the total longest
+          /  \     /  \      path? ________________
+         /    \   /    \
+        /      \  ------
+        --------
+
+Code:
+    if r is None:
+        return 0 # Why?
+    else:
+        left_result = longest_path(r.left)
+        right_result = longest_path(r.right)
+
+        # How do you combine the results and what do you return?
+
+
+In all of these, we recursed on r.left and on r.right and thought about what
+those recusive calls gave us back. I explicitly did *not* think about how
+those calls worked. (Although if there was a bug, I would.)
+
+Here's another one to try. In E3 part B, we recommended that you write a
+helper method that did this:
+
+def depth_and_sum(r):
+    '''Return both the depth of the deepest leaf and the sum along the path to
+    that leaf as a tuple.'''
+
+You try it by filling in values for the underscores:
+
+Example:
+            k
+         /     \
+        /       \        What if the left tuple is (___, ___) and the right
+       /\       /\       tuple is (___, ___)? What is the tuple to be returned?
+      /  \     /  \      (______, ______)
+     /    \   /    \
+    /      \  ------
+    --------
+
+Code:
+    if r is None:
+        # What's the depth of the longest path in an empty tree, and does it
+        # make a sound?
+        return (0, 0)
+    else:
+        # What do you do?
+
+
+With all of these, if you don't know what to do, guessing and typing and
+trying to fix problems is going to take you hours and hours. Draw pictures!

@@ -1,0 +1,14 @@
+N 1
+W 2
+
+
+Mouse:
+
+Scissors->Paper
+
+If south is mouse, then about to move north, and parrot east/west/no moving time, stay still.
+Else, move in only if non-moving, and kill.
+
+If south is east, then about to move west, and parrot north/east/no moving time, stay still. 
+Else, next turn only if non-moving, kill.
+ 

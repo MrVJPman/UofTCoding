@@ -1,0 +1,7 @@
+Single letter case [b]
+Repetition of letter case [bbb]
+Many single letter case [abcd]
+Single letter + Mutiple letter case [abbb]
+Many single single letter + Repetition of letter case []
+ 
+HuffmanCoder()

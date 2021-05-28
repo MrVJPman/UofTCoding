@@ -1,0 +1,12 @@
+assignment #3 changes:
+
+change "node" in _create_code into "ASCII_node"
+change "total_frequency" in _create_code into sum_child_frequency
+Comment on _create_code
+Comment on read_code
+change .strip('\n') to strip() in write_code
+decode, comment on current_node being reset to start a new traversal
+
+
+
+

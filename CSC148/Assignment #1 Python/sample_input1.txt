@@ -1,0 +1,12 @@
+shelves 2 2
+drink mango 2
+drink orange 2
+drink apple 2
+drink nectarine 2
+load
+customer simple
+new_day
+customer simple
+customer simple
+new_day
+customer simple
